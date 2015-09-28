@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 @StepDefAnnotation
 @ContextConfiguration(locations = {"classpath*:applicationContext.xml"})
-public class GreetingSteps {
+public class GreetingStepsIT {
 
 	@Autowired
 	private GreetingService greetingService;
