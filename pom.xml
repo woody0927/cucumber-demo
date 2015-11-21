@@ -11,6 +11,7 @@
 		<skipITs>true</skipITs>
 		<cucumber.java.version>1.1.5</cucumber.java.version>
 	</properties>
+	<!-- clean verify site -DskipITs=false -->
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -193,6 +194,11 @@
 		</dependency>
 		<!-- cucmber end -->
 		<dependency>
+		<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>${spring.version}</version>
@@ -228,6 +234,11 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
 		</dependency>
   </dependencies>
   
@@ -267,15 +278,4 @@
 			</plugin>
 		</plugins>
 	</reporting>
-  
-  <profiles>
-  	<!-- to execute the profile "-Pintegration_test" -->
-		<!-- to run the integration test "-DskipITs=false" -->
-		<profile>
-			<id>integration_test</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-		</profile>
-  </profiles>
 </project>

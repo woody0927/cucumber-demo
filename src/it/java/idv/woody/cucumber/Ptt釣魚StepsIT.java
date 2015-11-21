@@ -9,7 +9,7 @@ import cucumber.runtime.java.StepDefAnnotation;
 import static org.junit.Assert.*;
 
 @StepDefAnnotation
-@ContextConfiguration(locations = {"classpath*:applicationContext.xml"})
+//@ContextConfiguration(locations = {"classpath*:applicationContext.xml"})
 public class Ptt釣魚StepsIT {
 	
 	private double settlement;
